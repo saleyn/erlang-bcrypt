@@ -40,6 +40,8 @@
 #define u_int16_t uint16_t
 #define u_int32_t uint32_t
 #define u_int64_t uint64_t
+#else
+#include <sys/types.h>
 #endif
 
 /* Schneier specifies a maximum key length of 56 bytes.
