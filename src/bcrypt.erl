@@ -81,9 +81,11 @@ encode_salt(_R, _LogRounds) ->
 %%--------------------------------------------------------------------
 %% @doc Hash the specified password and the salt using the OpenBSD
 %% Blowfish password hashing algorithm. Returns the hashed password.
-%% @spec hashpw(Password::binary(), Salt::binary()) -> string()
 %% @end
 %%--------------------------------------------------------------------
+-spec hashpw(list()|binary(), binary()) -> string().
+hash(Password, Salt) when is_list(Password), is_binary(Salt) ->
+    hash(list_to_binary(Password), Salt);
 hash(Password, Salt) when is_binary(Password), is_binary(Salt) ->
     hashpw(Password, Salt).
 
