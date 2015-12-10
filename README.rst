@@ -24,10 +24,8 @@ Basic usage instructions
 
 1. Start the `sasl` and `crypto` applications::
 
-        1> ok = application:start(sasl).
-        ok
-        2> ok = application:start(crypto).
-        ok
+        1> {ok,[bcrypt]} = application:ensure_all_started(bcrypt).
+        {ok,[bcrypt]}
 
 2. Hash a password using a salt with the default number of rounds::
 
@@ -41,4 +39,8 @@ Basic usage instructions
         6> Hash =:= bcrypt:hashpw("bar", Hash).
         false
    
-Authors: Hunter Morris (http://skarab.com/)
+Authors:      Hunter Morris (http://skarab.com/)
+
+Contributors:
+* Serge Aleynikov
+    * Added support for rebar3, created Makefiles, bug fixes

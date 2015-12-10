@@ -1,7 +1,7 @@
 *.beam
 ebin/*.beam
 _build/
-lib/bcrypt/bcrypt
+rebar.lock
 
 ## libtool
 .deps
@@ -9,9 +9,6 @@ lib/bcrypt/bcrypt
 .libs
 
 ## Intermediate compilation files
-*.la
-*.lo
-*.loT
 *.o
 *.so
 
