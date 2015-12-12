@@ -39,8 +39,12 @@ Basic usage instructions
         6> Hash =:= bcrypt:hashpw("bar", Hash).
         false
    
-Authors:      Hunter Morris (http://skarab.com/)
+Authors
+-------
+
+* Hunter Morris (http://skarab.com/)
 
 Contributors:
+
 * Serge Aleynikov
     * Added support for rebar3, created Makefiles, bug fixes
